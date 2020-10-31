@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Entities\TodoItem.cs~RF43702fd.TMP" />
+    <PackageReference Include="flunt" Version="1.0.5" />
   </ItemGroup>
 
 </Project>
