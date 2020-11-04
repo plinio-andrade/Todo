@@ -25,7 +25,7 @@ namespace Todo.Tests.CommandTests
         }
 
         [TestMethod]
-        public void GivenAnValidCommand()
+        public void GivenAValidCommand()
         {
             Assert.AreEqual(_validCommand.Valid, true);
         }

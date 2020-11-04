@@ -30,7 +30,7 @@ namespace Todo.Domain.Handlers
                 return new GenericCommandResult(false, "Ops, parece que sua tarefa está errada!", command.Notifications);
 
             // Generate todo
-            var todo = new TodoItem(command.Title, command.User, DateTime.Now);
+            var todo = new TodoItem(command.Title, command.User, command.Date);
 
             // Save in database
             _repository.Create(todo);
@@ -81,7 +81,7 @@ namespace Todo.Domain.Handlers
         {
             command.Validate();
             if (command.Invalid)
-                return new GenericCommandResult(false, "Ops, parece que algo deu errado!", command.Notifications);
+                return new GenericCommandResult(false, "Ops, parece que sua tarefa está errada", command.Notifications);
 
             var todo = _repository.GetById(command.Id, command.User);
 

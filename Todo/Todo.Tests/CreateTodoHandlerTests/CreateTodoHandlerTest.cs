@@ -22,7 +22,7 @@ namespace Todo.Tests.CreateTodoHandlerTest
         }
 
         [TestMethod]
-        public void GivenAnValidCommandShouldCreateTask()
+        public void GivenAValidCommandShouldCreateTask()
         {
             _result = (GenericCommandResult)_handler.Handle(_validCommand);
             Assert.AreEqual(_result.Success, true);
